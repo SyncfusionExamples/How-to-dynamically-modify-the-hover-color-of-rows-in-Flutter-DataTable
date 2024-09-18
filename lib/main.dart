@@ -50,46 +50,40 @@ class _MyHomePageState extends State<MyHomePage> {
       body: SfDataGridTheme(
         data: SfDataGridThemeData(
             rowHoverColor: employeeDataSource._rowHoverColor),
-        child: Center(
-          child: SizedBox(
-            width: 500,
-            height: 550,
-            child: SfDataGrid(
-              source: employeeDataSource,
-              columnWidthMode: ColumnWidthMode.fill,
-              columns: <GridColumn>[
-                GridColumn(
-                    columnName: 'id',
-                    label: Container(
-                        padding: const EdgeInsets.all(16.0),
-                        alignment: Alignment.center,
-                        child: const Text(
-                          'ID',
-                        ))),
-                GridColumn(
-                    columnName: 'name',
-                    label: Container(
-                        padding: const EdgeInsets.all(8.0),
-                        alignment: Alignment.center,
-                        child: const Text('Name'))),
-                GridColumn(
-                    columnName: 'designation',
-                    label: Container(
-                        padding: const EdgeInsets.all(8.0),
-                        alignment: Alignment.center,
-                        child: const Text(
-                          'Designation',
-                          overflow: TextOverflow.ellipsis,
-                        ))),
-                GridColumn(
-                    columnName: 'salary',
-                    label: Container(
-                        padding: const EdgeInsets.all(8.0),
-                        alignment: Alignment.center,
-                        child: const Text('Salary'))),
-              ],
-            ),
-          ),
+        child: SfDataGrid(
+          source: employeeDataSource,
+          columnWidthMode: ColumnWidthMode.fill,
+          columns: <GridColumn>[
+            GridColumn(
+                columnName: 'id',
+                label: Container(
+                    padding: const EdgeInsets.all(16.0),
+                    alignment: Alignment.center,
+                    child: const Text(
+                      'ID',
+                    ))),
+            GridColumn(
+                columnName: 'name',
+                label: Container(
+                    padding: const EdgeInsets.all(8.0),
+                    alignment: Alignment.center,
+                    child: const Text('Name'))),
+            GridColumn(
+                columnName: 'designation',
+                label: Container(
+                    padding: const EdgeInsets.all(8.0),
+                    alignment: Alignment.center,
+                    child: const Text(
+                      'Designation',
+                      overflow: TextOverflow.ellipsis,
+                    ))),
+            GridColumn(
+                columnName: 'salary',
+                label: Container(
+                    padding: const EdgeInsets.all(8.0),
+                    alignment: Alignment.center,
+                    child: const Text('Salary'))),
+          ],
         ),
       ),
     );
